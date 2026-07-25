@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "retroWeb.css">
+    <script src = "retroWeb.js" defer></script>
+    <title>it's cahri</title>
+</head>
+<body>
+    <div class = "icons">
+        <div id = "iconUser" data-dialog-pair = "aboutMe">
+            <button><img src = "icons/iconUser.png"></button>
+            <p>about_me.txt</p>
+        </div>
+
+        <div id = "iconContacts" data-dialog-pair = "contactMe">
+            <button><img src = "icons/iconContacts.png"></button>
+            <p>contact_me.txt</p>
+        </div>
+
+        <div id = "iconMusic" data-dialog-pair = "musicPlayer">
+            <button><img src = "icons/iconMusic.png"></button>
+            <p>music_player.exe</p>
+        </div>
+
+        <div id = "iconBook" data-dialog-pair = "readingList">
+            <button><img src = "icons/iconBook.png"></button>
+            <p>reading_list.txt</p>
+        </div>
+
+        <div id = "iconProjects" data-dialog-pair = "projects">
+            <button><img src = "icons/iconProjects.png"></button>
+            <p>projects.exe</p>
+        </div>
+
+        <div id = "iconSecret" data-dialog-pair = "nothingHere">
+            <button><img src = "icons/iconSecret.png"></button>
+            <p>nothing_here.txt</p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "aboutMe">
+        <div class = "dialog-bar">
+            <p  style="margin-left: 7px;">about_me.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body">
+            <img src = "dialogImages/notCahri.jpg" id = "aboutMeImage">
+            <p style="margin-bottom: 20px;"> <i>caffeinated yet sleep-deprived </i> </p>
+            <p>i’m <b>cahri</b> aka levity, i like books and hate myself. i’m a <b>up dost scholar</b>, learning programming in order to make money (even though ai will steal this job first). have fun with this site i suppose; i don’t really care.</p>
+            <p style="margin-top: 15px;"><b>ps:</b> i severely lack artistic talent so i don't wanna touch frontend ever again.</p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "contactMe" >
+        <div class = "dialog-bar">
+            <p  style="margin-left: 7px;">contact_me.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body">
+            <p>instagram: <a href = "https://www.instagram.com/levity21st">@levity21st</a></p>
+            <p>github: <a href = "https://github.com/levity21st">github.com/levity21st</a></p>
+            <p>linkedIn: <a href = "https://www.linkedin.com/in/cahri-anjhelo-saturay/">linkedin.com/in/cahri-anjhelo-saturay/</a></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "musicPlayer">
+        <div class = "dialog-bar">
+            <p  style="margin-left: 7px;">music_player.exe</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body" id = "musicPlayerDialog">
+            <p id = "musicPlayerTitle" style="margin-bottom: 15px;">The Cardigans - Choke</a></p>
+            <img src = "musicImages/FirstBandOnTheMoon.jpg" id = "musicPlayerCover" style="margin-bottom: 25px;">
+            <div id = musicPlayerButtons>
+                <button id = "musicPlayerPrevious">Previous Song</button>
+                <button id = "musicPlayerPlay">Play/Pause</button>
+                <button id = "musicPlayerNext">Next Song</button>
+            </div>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "readingList">
+        <div class = "dialog-bar">
+            <p  style="margin-left: 7px;">reading_list.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body">
+            <div class = "readingListButtonStyle">
+                <div id = "Hooked" class = "readingListSelection">
+                    <img src = "bookImages/hooked.jpg" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "hookedReview">Asako Yuzuki - Hooked</button>
+                </div>
+
+                <div id = "All The Lovers" class = "readingListSelection">
+                    <img src = "bookImages/allthelovers.webp" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "alltheloversReview">Mieko Kawakami - All the Lovers in the Night</button>
+                </div>
+                
+                <div id = "Heaven" class = "readingListSelection">
+                    <img src = "bookImages/heaven.jpg" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "heavenReview">Mieko Kawakami - Heaven</button>
+                </div>
+
+                <div id = "Midnight Library" class = "readingListSelection">
+                    <img src = "bookImages/midnightlib.jpg" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "midnightReview">Matt Haig - The Midnight Library</button>
+                </div>
+
+                <div id = "i want to die 1" class = "readingListSelection">
+                    <img src = "bookImages/iwanttodie1.jpg" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "iwanttodie1Review">Baek Sehee - i want to die but i want to eat tteokbokki</button>
+                </div>
+
+                <div id = "i want to die 2" class = "readingListSelection">
+                    <img src = "bookImages/iwanttodie2.jpg" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "iwanttodie2Review">Baek Sehee - i want to die but i <b>still</b> want to eat tteokbokki</button>
+                </div>
+
+                <div id = "someone who will" class = "readingListSelection">
+                    <img src = "bookImages/someonewhowill.jpg" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "someonewhowillReview" >Raphael Bob-Waksberg - Someone Who Will Love You In All Your Damaged Glory</button>
+                </div>
+
+                <div id = "earthlings" class = "readingListSelection">
+                    <img src = "bookImages/earthlings.jpg" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "earthlingsReview" >Sayaka Murata - Earthlings</button>
+                </div>
+
+                    <div id = "conveniencestorewoman" class = "readingListSelection">
+                    <img src = "bookImages/conveniencestorewoman.jpg" class = "bookImages">
+                    <button class = "readingListButtons" data-book-pair = "conveniencestorewomanReview" >Sayaka Murata - Convenience Store Woman</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "hookedReview">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">hooked.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>Hooked</b></p>
+            <p>by Asako Yuzuki</p>
+            <p class = "starReview">✰✰✰✰½</p>
+            <p><i>"Why do you bother trying to involve yourself with people, when all there is to you is the front that you put on?"</i></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "alltheloversReview">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">all_the_lovers_in_the_night.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>All the Lovers in the Night</b></p>
+            <p>by Mieko Kawakami</p>
+            <p class = "starReview">✰✰✰✰½</p>
+            <p><i>"There was nothing here that I could reach out and touch. Nothing that would call my name. There never had been, and never will be."</i></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "heavenReview">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">heaven.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>Heaven</b></p>
+            <p>by Mieko Kawakami</p>
+            <p class = "starReview">✰✰✰✰✰</p>
+            <p><i>"But know what? They made it through... After everything, after all the pain, they made it here. It looks like a normal room, but it's really heaven."</i></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "midnightReview">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">the_midnight_library.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>The Midnight Library</b></p>
+            <p>by Matt Haig</p>
+            <p class = "starReview">✰✰✰½</p>
+            <p><i>"Twenty-seven hours before she decided to die, Nora Seed sat on her dilapidated sofa scrolling through other peoples' happy lives, waiting for something to happen."</i></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "iwanttodie1Review">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">i_want_to_die_but_i_want_to_eat_tteokbokki.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>i want to die but i want to eat tteokbokki</b></p>
+            <p>by Baek Seehee</p>
+            <p class = "starReview">✰✰✰✰</p>
+            <p><i>"I love and cherish your story. And I am your friend."</i></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "iwanttodie2Review">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">i_want_to_die_but_i_still_want_to_eat_tteokbokki.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>i want to die but i still want to eat tteokbokki</b></p>
+            <p>by Baek Seehee</p>
+            <p class = "starReview">✰✰✰✰½</p>
+            <p><i>"There are moments of emptiness that no one can fill; I don't need to fill them."</i></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "someonewhowillReview">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">someone_who_will_love_you.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>Someone Who Will Love You In All Your Damaged Glory</b></p>
+            <p>by Raphael Bob-Waksberg</p>
+            <p class = "starReview">✰✰✰✰✰</p>
+            <p><i>"I fell in love with you a little bit, in that stupid way where you completely make up a fictional version of the person you're looking at."</i></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "earthlingsReview">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">earthlings.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>Earthlings</b></p>
+            <p>by Sayaka Murata</p>
+            <p class = "starReview">✰✰✰✰½</p>
+            <p><i>"My womb was a factory component."</i></p>
+        </div>
+    </div>
+
+        <div class = "dialog" id = "conveniencestorewomanReview">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">convenience_store_woman.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body bookReview" >
+            <p><b>Convenience Store Woman</b></p>
+            <p>by Sayaka Murata</p>
+            <p class = "starReview">?</p>
+            <p><i>"Currently reading."</i></p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "projects">
+        <div class = "dialog-bar">
+            <p  style="margin-left: 7px;">projects.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body">
+            <img src = "dialogImages/notNikki.png">
+            <p style="margin-bottom: 15px;">and then <b>there's nothing.</b></p>
+            <p>i literally have done nothing worthwile yet so...</p>
+        </div>
+    </div>
+
+    <div class = "dialog" id = "nothingHere">
+        <div class = "dialog-bar">
+            <p  style="margin-left: 7px;">nothing_here.txt</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body">
+            <img src = "dialogImages/notNikki.png">
+            <p>it's not painful.</p>
+            <p>you just let go.</p>
+            <p>everything you once were.</p>
+            <p>and then <b>there's nothing.</b></p>
+        </div>
+    </div>
+
+    <div class = "taskbar">
+        <button data-dialog-pair = "windows" id = "taskbarButton"><img src = "icons/iconWindows.png"></button>
+        <p style="margin-right: 15px;"> <i> living vicariously in the past? </i> </p>
+    </div>
+
+    <div class = "dialog" id = "windows">
+        <div class = "dialog-bar">
+            <p style="margin-left: 7px;">living_vicariously_in_the_past?</p>
+            <div class = "dialog-close">    
+                <button> x </button>
+            </div>
+        </div>
+        <div class = "dialog-body">
+            <p style="margin-bottom: 10px;"><b>nostalgia</b></p>
+            <img src = "dialogImages/nostalgia.jpg">
+            <p>a sad pleasure experienced in recalling what no longer exists : a wistful or sentimental yearning for a return to some real or romanticized irrecoverable period</p>
+            <p style="margin-top: 20px;">thanks to <a href = "https://github.com/YoshiMannaert/95CSS"> yoshi mannaert</a> for the framework </p>
+            <p>also thanks to <a href = "https://alexbsoft.github.io/win95.css/"> alexbsoft</a> for the icons </p>
+        </div>
+    </div>
+</body>
+</html>
